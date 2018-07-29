@@ -1,0 +1,253 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    font-size: 16px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #f5f5f5;
+}
+
+/* Helper Class
+-------------------------------------------------- */
+
+.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+
+button:focus {
+    outline: #fff auto 5px;
+}
+
+.navbar--light-blue {
+    background-color: #8dc2cf;
+}
+
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Header
+-------------------------------------------------- */
+
+header {
+    width: 100%;
+}
+
+header,
+header a {
+    color: #000;
+}
+
+.container-menu {
+    padding: 0 19px;
+}
+
+.first-menu li {
+    font-size: .6875rem;
+    text-transform: uppercase;
+    margin-left: 0.5%;
+    
+}
+
+.first-menu li span{
+    height: 48px;
+    width: 2%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.first-menu li,
+.first-menu li a{
+    height: 48px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.first-menu li a{
+    width: 100%;
+}
+
+.first-menu li:nth-child(1){
+    width: 18%;
+    margin-left: 0;
+}
+
+.first-menu li:nth-child(2){
+    width: 18%;
+    margin-left: 0;
+}
+
+.first-menu li:nth-child(8){
+    background-color: #f5d94a;
+    border-radius: 12px 12px 0 0;
+}
+
+.first-menu li:nth-child(9),
+.first-menu li:nth-child(9) a{
+    width: 10.3%;
+}
+
+.first-menu li:nth-child(9) a .blue-tag{
+    color: #fff;
+    background-color: #60a9d9;
+    height: auto;
+    width: 48px;
+    display: inline-block;
+    width: 80px;
+    border-radius: 50px;
+    padding: 5px 0;
+}
+
+.second-menu {
+    height: 70px;
+    border-radius: 0 0 20px 20px;
+    background-color: #f5d94a;
+}
+
+.second-menu li {
+    font-size: .75rem;
+    font-weight: 800;
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
+    background: url("../img/marker.png") no-repeat right center;
+}
+
+.second-menu li,
+.second-menu li a{
+    height: 70px;
+    width: 18.9%;
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.second-menu li:last-child,
+.second-menu li:last-child a{
+    background: none;
+    padding-left: 1%;
+    width: 24.4%;
+}
+
+.second-menu li:last-child a{
+    position: relative;
+}
+
+.second-menu li:last-child a .cart-icon{
+    position: absolute;
+    top: 8px;
+    right: 20px;
+}
+
+.second-menu li a .lock-icon{
+    margin-top: 2px;
+    margin-right: 8px;
+}
+
+.plan-type{
+    list-style: none;
+    padding-left: 0;
+}
+
+.plan-type li.active a,
+.plan-type li:hover a{
+    color: #1b69ac;
+}
+
+.plan-type li a{
+    color: #999;
+}
+
+.plan-type li a:hover{
+    text-decoration: none;
+}
+
+.plan-type li{
+    display: inline-block;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    height: 14px;
+    line-height: 14px;
+}
+
+.plan-type li:first-child{
+    border-right: 2px solid #2a73b2;
+    padding-right: 10px;
+}
+
+.plan-type li:last-child{
+    padding-left: 5px;
+}
+
+.border-right-blue{
+    border-right: 2px solid #2a73b2;
+}
+
+.big-title{
+    font-size: 3rem;
+    line-height: 100%;
+    margin-bottom: 0;
+}
+
+.info-type-plan{
+    height: 96px;
+    font-size: 1rem;
+    line-height: 100%;
+    line-height: 1.1rem;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/* General Styles
+-------------------------------------------------- */
+
+.semi-bold{
+    font-weight: 600;
+    font-family: Montserrat, sans-serif;
+}
+
+.bold{
+    font-weight: 700;
+    font-family: Montserrat, sans-serif;
+}
+
+.extra-bold{
+    font-weight: 800;
+    font-family: Montserrat, sans-serif;
+}
+
+.blue{
+    color: #146aa7;
+}
+
+.light-yellow{
+    color: #fed601;
+}
+
+.yellow{
+    color: #ffc20d;
+}
+
+@media (min-width:1246px) {
+    .container {
+        max-width: 1246px;
+    }
+}
