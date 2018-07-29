@@ -1,0 +1,14 @@
+{% if products|length > 0 %}
+    {% if pages.current not in ['catalog', 'search'] %}
+        <div class="tituloVitrine"><div><span>{{ showcaseTitle }}</span></div></div>
+    {% endif %}
+    
+    <div class="slideDestaque galeria">
+        <ul>
+            {% for product in products %}
+                <li>{{ _view.element('snippets/product', {"product": product}) }}</li>
+            {% endfor %}
+        </ul>
+    </div> 
+{% endif %}
+  

@@ -1,0 +1,45 @@
+<div id="page" class="container">
+    <div class="clearfix">
+        <div class="slider listaVendidos">
+            {% set vendidos = Products({ 
+                'filter': 'new',
+                'order': 'rand',
+                'limit': 12
+            }) %}
+            
+            {{ _view.element('snippets/showcase', {
+                "showcaseTitle": "COMPRE SEU CHIP 
+                ESCOLHA SEU PLANO ALÔ dev",
+                "products": vendidos
+            }) }}
+        </div>
+        
+        <div class="slider listaVendidos">
+            {% set vendidos = Products({ 
+                'filter': 'promotion',
+                'order': 'rand',
+                'limit': 12
+            }) %}
+            
+            {{ _view.element('snippets/showcase', {
+                "showcaseTitle": "PLANOS",
+                "products": vendidos
+            }) }}
+        </div>
+    </div>
+</div>
+
+{% if settings.chk == 'true' %}
+    <div class="Depoimentos">
+    
+        <div class="tituloAvaliacoes">
+            <div class="medalha">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31.272 31.272" style="enable-background:new 0 0 31.272 31.272;" width="30px" height="30px" xml:space="preserve" fill="{{settings.color_tone_7}}"><g> <path d="M24.297,19.041c0.067-0.217,0.113-0.458,0.115-0.738c0.018-1.226,0.551-2.149,1.603-2.775 c1.052-0.627,1.279-1.474,0.682-2.541c-0.599-1.068-0.599-2.137,0-3.205c0.598-1.068,0.37-1.914-0.682-2.541 c-1.052-0.625-1.585-1.551-1.603-2.774c-0.017-1.222-0.635-1.844-1.859-1.859c-1.223-0.016-2.147-0.55-2.775-1.602 c-0.625-1.052-1.471-1.28-2.538-0.68c-1.07,0.596-2.139,0.596-3.205,0c-1.067-0.6-1.915-0.372-2.543,0.68 c-0.624,1.052-1.55,1.586-2.775,1.602c-1.223,0.015-1.844,0.636-1.86,1.858C6.84,5.69,6.307,6.615,5.255,7.24 c-1.05,0.628-1.278,1.474-0.681,2.542c0.6,1.067,0.6,2.136,0,3.205c-0.598,1.067-0.369,1.914,0.682,2.541 c1.052,0.625,1.585,1.549,1.602,2.775c0.004,0.222,0.048,0.402,0.092,0.586l-4.826,9.482l4.031-0.451l2.231,3.352 c0,0,2.925-6.1,4.128-8.582c0.443,0.149,0.949,0.073,1.52-0.245c1.066-0.599,2.135-0.599,3.205,0 c0.602,0.337,1.133,0.402,1.594,0.213l4.954,8.518l1.392-3.611l3.969,0.515L24.297,19.041z M15.635,18.687 c-4.144,0-7.505-3.359-7.505-7.502c0-4.145,3.361-7.506,7.505-7.506c4.145,0,7.505,3.361,7.505,7.506 C23.14,15.328,19.779,18.687,15.635,18.687z"/> <circle cx="15.636" cy="11.254" r="5.9"/> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g> </g><g></g><g></g></svg>
+            </div>
+            <strong>Avalia&ccedil;&atilde;o dos clientes, <a href="depoimentos.php?">clique aqui para ver mais.</a></strong>
+        </div>
+        
+        <div class="listaAvaliacoes">{{ _view.element('CustomerReview.reviews') }}</div>
+            
+    </div>
+{% endif %}

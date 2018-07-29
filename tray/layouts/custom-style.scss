@@ -1,0 +1,58 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+body, html{
+  font-family: 'Raleway', sans-serif;
+}
+h1, h2, h3, h4, h5, h6, .title{
+  font-family: 'Open Sans', sans-serif;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  font-size: 16px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+
+body > .container-fluid {
+  //padding-top: 94.38px;
+}
+
+button:focus{
+  outline: 5px auto white;
+}
+
+.navbar--light-blue{
+  background-color: #8dc2cf;
+}
+
+.navbar {
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+}
+
+
+/* General Styles
+-------------------------------------------------- */
+
+@media (min-width: 1246px){
+    
+    .container {
+        width: 1246px;
+    }
+}

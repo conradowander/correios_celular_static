@@ -1,0 +1,17 @@
+<ul>
+    {% for category in categories %}
+        {% if loop.index <= limit or not limit %}
+            <li class="id_{{ category.id }}"><p class="menu"></p><a href="{{ category.link }}"><span></span>{{ category.name }}{% if category.children|length > 0 %}<div class="ico-seta"></div>{% endif %}</a>
+                {% if category.children|length > 0 %}
+                <div class="submenu">
+                    <ul>
+                        {% for child in category.children %}
+                        <li><a href="{{ child.link }}">{{ child.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+            </li>
+        {% endif %}
+    {% endfor %}
+</ul>

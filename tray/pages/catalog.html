@@ -1,0 +1,49 @@
+{% if banner.title %}
+    <div class="banner banner-title">
+        {{ banner.title }}
+    </div>
+{% endif %}
+
+{% if breadcrumb %}
+
+    <div class="vspace-sm">
+        {{ _view.element('snippets/breadcrumb') }}
+    </div>
+
+{% endif %}
+
+<h1>{{ category.name }}</h1>
+
+{% if category.small_description %}
+    {{ category.small_description }}
+{% endif %}
+
+{% if products|length > 0 %}
+
+    <div class="vspace-sm">
+        {{ _view.element('snippets/filter', {
+            'brands': category.brands
+        }) }}
+    </div>
+
+    <div class="vspace-sm">
+        {{ _view.element('snippets/pagination') }}
+    </div>
+
+    <div class="vspace-sm {{ filters ? 'showcase-3-col' }}">
+        {% if filters %}
+            {% element 'snippets/smart-filter' %}
+        {% endif %}
+        
+        {% element 'snippets/showcase' {"products": products} %}
+    </div>
+
+    <div class="vspace-sm">
+        {{ _view.element('snippets/pagination') }}
+    </div>
+
+{% else %}
+
+    <p>Nenhum produto encontrado nessa categoria.</p>
+
+{% endif %}
