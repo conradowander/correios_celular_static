@@ -1,9 +1,148 @@
-<footer class="footer">
-    <div class="container-fluid">
-        <span class="text-muted">Place sticky footer content here.</span>
-    </div>
+{% set linkReplace = {
+'links.home': links.home,
+'links.contact': links.contact,
+'links.company': links.company,
+'links.info': links.info,
+'links.info_buy': links.info_buy,
+'links.security': links.security,
+'links.warranty': links.warranty,
+'links.send': links.send,
+'links.payment': links.payment,
+'links.newsletter': links.newsletter,
+'links.map': links.map,
+'links.compare': links.compare,
+'links.register': links.register
+} %}
+<footer class="footer clearfix">
+    <section class="container mb-4 d-table">
+        <div class="row">
+            <div class="col-sm-6">
+               <div class="row">
+                    <div class="col-sm-3 text-center">
+                       <a href="https://www.correioscelular.com.br">
+                            <img class="img-responsive" src="{{ themePath }}{{ settings.logo_white }}" alt="Correios Celular" title="Correios Celular">
+                        </a>
+                    </div>
+                    <div class="col-sm-3">
+                        <!--
+                        <p>
+                            <a href="https://www.correioscelular.com.br/sobre">Sobre o correios Celular</a><br>
+                            <a href="https://www.correioscelular.com.br/duvidas-frequentes">FAQ</a><br>
+                            <a href="https://www.correioscelular.com.br/como-configurar-sua-internet">Configure sua Internet</a><br>
+                            <a href="#">Compre seu chip</a><br>
+                            <a href="http://www.correios.com.br">Baixe o App</a><br>
+                        </p>
+                        -->
+                        <p>
+                            {% if settings.exibe_links_footer == 'true' %}
+                                {% if settings.name_footer1 and settings.link_footer1 %}
+                                    <a href="{{ settings.link_footer1 }}">{{ settings.name_footer1 }}</a><br>
+                                {% endif %}
+                                 {% if settings.name_footer2 and settings.link_footer2 %}
+                                    <a href="{{ settings.link_footer2 }}">{{ settings.name_footer2 }}</a><br>
+                                {% endif %}
+                                 {% if settings.name_footer3 and settings.link_footer3 %}
+                                    <a href="{{ settings.link_footer3 }}">{{ settings.name_footer3 }}</a><br>
+                                {% endif %}
+                                 {% if settings.name_footer4 and settings.link_footer4 %}
+                                    <a href="{{ settings.link_footer4 }}">{{ settings.name_footer4 }}</a><br>
+                                {% endif %}
+                                 {% if settings.name_footer5 and settings.link_footer5 %}
+                                    <a href="{{ settings.link_footer5 }}">{{ settings.name_footer5 }}</a><br>
+                                {% endif %}
+					        {% endif %}
+                        </p>
+                    </div>
+                    <div class="col-sm-3">
+                        <p>
+                            {% if settings.exibe_links_footer == 'true' %}
+                                {% if settings.name_footer6 and settings.link_footer6 %}
+                                    <a href="{{ settings.link_footer6 }}">{{ settings.name_footer6 }}</a><br>
+                                {% endif %}
+                                 {% if settings.name_footer7 and settings.link_footer7 %}
+                                    <a href="{{ settings.link_footer7 }}">{{ settings.name_footer7 }}</a><br>
+                                {% endif %}
+                                 {% if settings.name_footer8 and settings.link_footer8 %}
+                                    <a href="{{ settings.link_footer8 }}">{{ settings.name_footer8 }}</a><br>
+                                {% endif %}
+                                 {% if settings.name_footer9 and settings.link_footer9 %}
+                                    <a href="{{ settings.link_footer9 }}">{{ settings.name_footer9 }}</a><br>
+                                {% endif %}
+                                 {% if settings.name_footer10 and settings.link_footer10 %}
+                                    <a href="{{ settings.link_footer10 }}">{{ settings.name_footer10 }}</a><br>
+                                {% endif %}
+                                 {% if settings.name_footer11 and settings.link_footer11 %}
+                                    <a href="{{ settings.link_footer11 }}">{{ settings.name_footer11 }}</a><br>
+                                {% endif %}
+					        {% endif %}
+                        </p>
+                    </div>
+                    <div class="col-sm-3">
+                        <p class="size2 extra-bold-weight">
+                            Central de atendimento
+                        </p>
+                        <p class="lh1">
+                            <span class="size3 extra-bold-weight">*288</span><br>
+                            Ou 10543 de<br>
+                            qualquer<br>
+                            outro telefone
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-10 offset-sm-3">
+                        <img class="appstore" src="{{ themePath }}{{ settings.appstore }}" alt="App Store" title="App Store">
+                        <img class="googleplay" src="{{ themePath }}{{ settings.googleplay }}" alt="Google Play" title="Google Play">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-5 offset-sm-1">
+               <div class="row">
+                    <div class="col-sm-12">
+                        <p class="text-center size1 border-bottom border-bottom--white pb-1 extra-bold-weight">
+                            Para mais serviços, ligue para os número abaixo
+                        </p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p class="text-center lh1">
+                            <span class="size3 extra-bold-weight">*221#</span><br>
+                            para saber seu número<br>
+                            correios celular
+                        </p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p class="text-center lh1">
+                            <span class="size3 extra-bold-weight">*222#</span><br>
+                            para saber<br>
+                            seu saldo
+                        </p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p class="text-center lh1">
+                            <span class="size3 extra-bold-weight">*225#</span><br>
+                            para saber seu<br>
+                            consumo<br>
+                            de internet e voz
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </footer>
 <script type="text/javascript" src="{{ asset('js/third-party/jquery-3.3.1.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/third-party/popper.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/third-party/tether.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/third-party/bootstrap.min.js') }}"></script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.1';
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Scripts -->

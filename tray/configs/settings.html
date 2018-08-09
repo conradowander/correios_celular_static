@@ -480,35 +480,46 @@
     <div class="form-group">
         <h2>
             <i><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="40" height="40"><path fill="#665A4B" d="M181.347 63.523c-4.346-4.346-4.346-11.394 0-15.742 4.346-4.342 11.394-4.342 15.742 0l58.432 58.44 89.52-102.483c4.083-4.594 11.12-5.008 15.713-.925 4.595 4.085 5.01 11.12.925 15.715l-89.52 102.48c-4.056 4.564-9.882 7.284-15.983 7.463-.215.007-.43.01-.646.01-5.875 0-11.583-2.355-15.746-6.52l-58.437-58.434zm219.35 426.216H267.13v-33.395c0-6.147-4.983-11.13-11.13-11.13s-11.13 4.983-11.13 11.13v33.39H111.304c-6.147 0-11.13 4.984-11.13 11.13 0 6.148 4.983 11.13 11.13 11.13h289.39c6.148 0 11.13-4.982 11.13-11.13.002-6.146-4.98-11.13-11.128-11.13z"/><path fill="#494434" d="M467.478 467.478H44.522C19.934 467.478 0 447.545 0 422.958V144.695c0-24.588 19.933-44.522 44.522-44.522h422.956c24.588 0 44.522 19.933 44.522 44.522v278.26c0 24.59-19.934 44.522-44.522 44.522z"/><path fill="#627C78" d="M512 422.957H0v-278.26h512v278.26z"/><path fill="#748C88" d="M378.435 422.957H189.217l89.043-278.26h189.217l-89.042 278.26z"/><path fill="#DDAC5E" d="M384 235.965c0 23.564-19.102 42.666-42.666 42.666-1.34 0-2.667-.07-3.977-.19 2.578 8.14 3.977 16.8 3.977 25.79 0 47.13-38.205 85.338-85.334 85.338s-85.334-38.205-85.334-85.334c0-8.99 1.4-17.652 3.977-25.79-1.31.12-2.636.19-3.977.19-23.564 0-42.666-19.1-42.666-42.665s19.102-42.667 42.666-42.667c21.728 0 39.648 16.245 42.312 37.248 12.634-7.392 27.326-11.647 43.02-11.647s30.388 4.255 43.022 11.647c2.665-21.005 20.585-37.25 42.312-37.25 23.566 0 42.668 19.1 42.668 42.665z"/><path fill="#FFDB80" d="M384 235.965c0 23.564-19.102 42.666-42.666 42.666-1.342 0-2.667-.07-3.977-.19 2.578 8.14 3.977 16.8 3.977 25.79 0 47.13-38.205 85.338-85.334 85.338-19.01 0-36.56-6.222-50.744-16.73l49.25-153.91c.5-.01.994-.027 1.494-.027 15.695 0 30.387 4.256 43.02 11.648 2.666-21.004 20.586-37.248 42.313-37.248 23.565 0 42.667 19.1 42.667 42.665z"/></svg></i>
-            Logo
+            Logos e imagens
         </h2>
-        <p>Escolha a logo para ser exibida em texto ou em imagem</p>
+        <p>Abaixo faça o upload de algumas imagens predefinidas para o layout:</p>
         <hr>
         <div class="row">
             <div class="col-sm-8">
-                <h4 class="space-title">Em imagem</h4>
+                <h4 class="space-title">Logo para o cabeçalho:</h4>
                 <div class="input-group file">
-                    <span class="input-group-addon">
-                        <input type="radio" name="logo_radio" value="image">
-                    </span>
-                    <input type="file" class="form-control" id="logo_image" name="logo_image">
+                    <input type="file" class="form-control" id="logo_correios_celular" name="logo_correios_celular">
                     <a class="remove-img btn btn-danger" style="margin-top: 5px;">Remover</a>
                 </div>
-            </div>
-            <div class="col-sm-4">
-                <h4 class="space-title">Em texto</h4>
-                <div class="input-group" style="margin: 5px 0;">
-                    <span class="input-group-addon">
-                        <input type="radio" name="logo_radio" value="text">
-                    </span>
-                    <input type="text" class="form-control" name="logo_text" id="logo_text">
+                <h4 class="space-title">Logo para o rodapé:</h4>
+                <div class="input-group file">
+                    <input type="file" class="form-control" id="logo_white" name="logo_white">
+                    <a class="remove-img btn btn-danger" style="margin-top: 5px;">Remover</a>
                 </div>
-            </div>
-            <div class="col-sm-4">
-                <h4 class="space-title">Cor</h4>
-                <div class="input-group colorPicker colorpicker-element">
-                    <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
-                    <input name="color_text_logo" id="color_text_logo" placeholder="#252525" class="form-control" type="text">
+                <h4 class="space-title">Imagem para atendimento Whatsapp:</h4>
+                <div class="input-group file">
+                    <input type="file" class="form-control" id="tag_atendimento_wpp" name="tag_atendimento_wpp">
+                    <a class="remove-img btn btn-danger" style="margin-top: 5px;">Remover</a>
+                </div>
+                <h4 class="space-title">Logo de compra segura:</h4>
+                <div class="input-group file">
+                    <input type="file" class="form-control" id="lock_icon" name="lock_icon">
+                    <a class="remove-img btn btn-danger" style="margin-top: 5px;">Remover</a>
+                </div>
+                <h4 class="space-title">Logo de carrinho de compras:</h4>
+                <div class="input-group file">
+                    <input type="file" class="form-control" id="cart_img" name="cart_img">
+                    <a class="remove-img btn btn-danger" style="margin-top: 5px;">Remover</a>
+                </div>
+                <h4 class="space-title">Logo App Store:</h4>
+                <div class="input-group file">
+                    <input type="file" class="form-control" id="appstore" name="appstore">
+                    <a class="remove-img btn btn-danger" style="margin-top: 5px;">Remover</a>
+                </div>
+                <h4 class="space-title">Logo Google Play:</h4>
+                <div class="input-group file">
+                    <input type="file" class="form-control" id="googleplay" name="googleplay">
+                    <a class="remove-img btn btn-danger" style="margin-top: 5px;">Remover</a>
                 </div>
             </div>
         </div>
@@ -693,6 +704,204 @@
                     <input name="color_tone_20" id="color_tone_20" placeholder="#252525" class="form-control" type="text">
                 </div>
             </div>
+        </div>
+    </div>
+    
+    <!-- LINKS FOOTER -->
+    <div class="form-group">
+        <div class="row">
+            <h2>
+                <i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.999 511.999" width="40" height="40"><path fill="#D8DBE2" d="M469.852 42.176c45.377 45.366 45.377 118.928 0 164.305l-95.732 95.75c-12.89 12.89-28.047 22.11-44.19 27.68-24.56 8.465-51.38 8.465-75.94 0-16.147-5.567-31.3-14.784-44.19-27.673-12.878-12.89-22.106-28.042-27.67-44.19l2.034-2.035c-2.037 2.037 35.907-36.645 35.907-36.645L256.03 256c19.806 19.817 52.044 19.817 71.86 0l2.038-2.038 93.707-93.707c19.807-19.807 19.807-52.045 0-71.862-19.818-19.807-52.056-19.807-71.862 0L258.066 182.1l-37.97 15.44-37.968-15.44c5.567-16.135 14.784-31.3 27.673-44.19l95.75-95.732c45.38-45.38 118.94-45.38 164.31-.002z"/><path fill="#A7AFBA" d="M258.067 182.098c16.135 5.567 31.29 14.795 44.18 27.684 12.888 12.878 22.116 28.043 27.683 44.18l-2.037 2.036c-19.818 19.818-52.056 19.818-71.862 0-19.81-19.807-52.05-19.807-71.86 0l-2.03 2.037-93.704 93.707c-19.82 19.818-19.82 52.056 0 71.862 19.807 19.818 52.045 19.818 71.86 0L254 329.897c24.557 8.465 51.38 8.465 75.937 0-5.566 16.146-14.794 31.3-27.683 44.19L206.52 469.83c-45.376 45.37-118.94 45.37-164.316 0-45.365-45.372-45.365-118.934 0-164.31l95.745-95.734c12.89-12.89 28.04-22.117 44.19-27.684 24.55-8.466 51.372-8.466 75.93 0z"/><path fill="#080342" d="M475.635 36.393c-48.49-48.483-127.38-48.485-175.866 0l-95.75 95.743c-12.558 12.554-22.06 27.22-28.29 43.63-15.898 6.043-30.79 15.452-43.57 28.233l-95.74 95.74C12.93 323.22 0 354.45 0 387.67s12.935 64.444 36.423 87.933c24.243 24.242 56.088 36.364 87.932 36.364s63.69-12.126 87.932-36.368l95.743-95.75c12.554-12.556 22.057-27.22 28.29-43.63 15.894-6.04 30.79-15.45 43.573-28.23l95.743-95.746c48.484-48.485 48.484-127.376 0-175.864zm-179.16 331.914L200.73 464.05c-42.115 42.114-110.64 42.114-152.753 0-20.403-20.402-31.637-47.526-31.637-76.377 0-28.852 11.235-55.976 31.636-76.376l95.742-95.743c42.113-42.114 110.637-42.115 152.753 0 4 3.997 7.7 8.323 11.01 12.853 2.66 3.647 7.77 4.446 11.42 1.788 3.648-2.658 4.448-7.77 1.79-11.417-3.8-5.212-8.06-10.185-12.65-14.78-10.59-10.588-22.626-18.862-35.48-24.825l84.997-85c8.04-8.038 18.75-12.466 30.157-12.466 11.406 0 22.114 4.428 30.154 12.467s12.467 18.748 12.467 30.154-4.426 22.114-12.466 30.154l-95.746 95.743c-8.04 8.038-18.748 12.466-30.155 12.466-11.404 0-22.113-4.42-30.15-12.46-23-22.992-60.42-22.992-83.42 0l-95.74 95.74C71.524 357.1 65.4 371.91 65.4 387.68s6.126 30.584 17.252 41.71c11.126 11.126 25.938 17.253 41.71 17.253s30.584-6.125 41.71-17.25l90.213-90.21c11.626 3.46 23.656 5.192 35.688 5.192 7.988 0 15.975-.765 23.843-2.29-5.033 9.603-11.494 18.388-19.334 26.227zM464.078 200.7l-95.744 95.744c-42.112 42.115-110.638 42.112-152.752 0-3.997-3.997-7.7-8.323-11.003-12.852-2.66-3.648-7.77-4.448-11.42-1.79-3.65 2.658-4.45 7.77-1.79 11.417 3.8 5.21 8.06 10.18 12.65 14.78 10.59 10.58 22.622 18.86 35.48 24.82l-85 85c-8.04 8.04-18.75 12.46-30.158 12.46-11.406 0-22.114-4.427-30.154-12.467-8.04-8.038-12.467-18.747-12.467-30.153 0-11.404 4.43-22.112 12.468-30.152l95.744-95.74c16.625-16.628 43.673-16.628 60.3-.01 11.132 11.133 25.945 17.26 41.716 17.26 15.77 0 30.583-6.126 41.71-17.25l95.74-95.744c11.127-11.124 17.254-25.94 17.254-41.71s-6.124-30.582-17.25-41.71c-11.128-11.122-25.94-17.25-41.71-17.25s-30.584 6.127-41.71 17.253l-90.21 90.213c-19.338-5.758-39.81-6.728-59.528-2.905 5.03-9.61 11.49-18.395 19.33-26.23L311.32 47.94c42.11-42.116 110.64-42.116 152.75 0 42.113 42.117 42.113 110.643 0 152.755z"/></svg></i>
+                Links no rodapé
+            </h2>
+            <p>Insira o links para o rodapé abaixo.</p>
+            <div class="col-sm-4">
+                <select class="form-control" id="exibe_links_footer" name="exibe_links_footer" style="margin-left: 40px">
+                    <option value="">Selecione</option>
+                    <option value="true">Exibir</option>
+                    <option value="false">Ocultar</option>
+                </select>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            
+            <div class="col-sm-12">
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    <span class="input-group-addon">
+                        1 - Nome
+                    </span>
+                    <input name="name_footer1" id="name_footer1" placeholder="Ex: Sobre o correios Celular" class="form-control" type="text">
+                </div>
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    
+                    <span class="input-group-addon">
+                        Link
+                    </span>
+                    <input name="link_footer1" id="link_footer1" placeholder="Ex: https://www.correioscelular.com.br/sobre" class="form-control" type="text">
+                </div>
+            </div>
+            
+            <div class="col-sm-12">
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    <span class="input-group-addon">
+                        2 - Nome
+                    </span>
+                    <input name="name_footer2" id="name_footer2" placeholder="Ex: Sobre o correios Celular" class="form-control" type="text">
+                </div>
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    
+                    <span class="input-group-addon">
+                        Link
+                    </span>
+                    <input name="link_footer2" id="link_footer2" placeholder="Ex: https://www.correioscelular.com.br/sobre" class="form-control" type="text">
+                </div>
+            </div>
+            
+            <div class="col-sm-12">
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    <span class="input-group-addon">
+                        3 - Nome
+                    </span>
+                    <input name="name_footer3" id="name_footer3" placeholder="Ex: Sobre o correios Celular" class="form-control" type="text">
+                </div>
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    
+                    <span class="input-group-addon">
+                        Link
+                    </span>
+                    <input name="link_footer3" id="link_footer3" placeholder="Ex: https://www.correioscelular.com.br/sobre" class="form-control" type="text">
+                </div>
+            </div>
+            
+            <div class="col-sm-12">
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    <span class="input-group-addon">
+                        4 - Nome
+                    </span>
+                    <input name="name_footer4" id="name_footer4" placeholder="Ex: Sobre o correios Celular" class="form-control" type="text">
+                </div>
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    
+                    <span class="input-group-addon">
+                        Link
+                    </span>
+                    <input name="link_footer4" id="link_footer4" placeholder="Ex: https://www.correioscelular.com.br/sobre" class="form-control" type="text">
+                </div>
+            </div>
+            
+            <div class="col-sm-12">
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    <span class="input-group-addon">
+                        5 - Nome
+                    </span>
+                    <input name="name_footer5" id="name_footer5" placeholder="Ex: Sobre o correios Celular" class="form-control" type="text">
+                </div>
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    
+                    <span class="input-group-addon">
+                        Link
+                    </span>
+                    <input name="link_footer5" id="link_footer5" placeholder="Ex: https://www.correioscelular.com.br/sobre" class="form-control" type="text">
+                </div>
+            </div>
+            
+            <div class="col-sm-12">
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    <span class="input-group-addon">
+                        6 - Nome
+                    </span>
+                    <input name="name_footer6" id="name_footer6" placeholder="Ex: Sobre o correios Celular" class="form-control" type="text">
+                </div>
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    
+                    <span class="input-group-addon">
+                        Link
+                    </span>
+                    <input name="link_footer6" id="link_footer6" placeholder="Ex: https://www.correioscelular.com.br/sobre" class="form-control" type="text">
+                </div>
+            </div>
+            
+            <div class="col-sm-12">
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    <span class="input-group-addon">
+                        7 - Nome
+                    </span>
+                    <input name="name_footer7" id="name_footer7" placeholder="Ex: Sobre o correios Celular" class="form-control" type="text">
+                </div>
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    
+                    <span class="input-group-addon">
+                        Link
+                    </span>
+                    <input name="link_footer7" id="link_footer7" placeholder="Ex: https://www.correioscelular.com.br/sobre" class="form-control" type="text">
+                </div>
+            </div>
+            
+            <div class="col-sm-12">
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    <span class="input-group-addon">
+                        8 - Nome
+                    </span>
+                    <input name="name_footer8" id="name_footer8" placeholder="Ex: Sobre o correios Celular" class="form-control" type="text">
+                </div>
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    
+                    <span class="input-group-addon">
+                        Link
+                    </span>
+                    <input name="link_footer8" id="link_footer8" placeholder="Ex: https://www.correioscelular.com.br/sobre" class="form-control" type="text">
+                </div>
+            </div>
+            
+            <div class="col-sm-12">
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    <span class="input-group-addon">
+                        9 - Nome
+                    </span>
+                    <input name="name_footer9" id="name_footer9" placeholder="Ex: Sobre o correios Celular" class="form-control" type="text">
+                </div>
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    
+                    <span class="input-group-addon">
+                        Link
+                    </span>
+                    <input name="link_footer9" id="link_footer9" placeholder="Ex: https://www.correioscelular.com.br/sobre" class="form-control" type="text">
+                </div>
+            </div>
+            
+            <div class="col-sm-12">
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    <span class="input-group-addon">
+                        10 - Nome
+                    </span>
+                    <input name="name_footer10" id="name_footer10" placeholder="Ex: Sobre o correios Celular" class="form-control" type="text">
+                </div>
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    
+                    <span class="input-group-addon">
+                        Link
+                    </span>
+                    <input name="link_footer10" id="link_footer10" placeholder="Ex: https://www.correioscelular.com.br/sobre" class="form-control" type="text">
+                </div>
+            </div>
+            
+            <div class="col-sm-12">
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    <span class="input-group-addon">
+                        11 - Nome
+                    </span>
+                    <input name="name_footer11" id="name_footer11" placeholder="Ex: Sobre o correios Celular" class="form-control" type="text">
+                </div>
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    
+                    <span class="input-group-addon">
+                        Link
+                    </span>
+                    <input name="link_footer11" id="link_footer11" placeholder="Ex: https://www.correioscelular.com.br/sobre" class="form-control" type="text">
+                </div>
+            </div>
+            
         </div>
     </div>
 

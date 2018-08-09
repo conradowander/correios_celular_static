@@ -13,60 +13,79 @@
         <link rel="stylesheet" href="css/third-party/normalize.css">
         <link rel="stylesheet" href="css/third-party/bootstrap.min.css">
         <link rel="stylesheet" href="css/theme.min.css">
+        
+        <style type="text/css">
+            /* Internal Fonts */
+            @font-face {
+                font-family: 'HelveticaNeue-Light';
+                src: url('css/fonts/HelveticaNeue-Light.eot?#iefix') format('embedded-opentype'), 
+                    url('css/fonts/HelveticaNeue-Light.woff') format('woff'), 
+                    url('css/fonts/HelveticaNeue-Light.ttf')  format('truetype'), 
+                    url('css/fonts/HelveticaNeue-Light.svg#HelveticaNeue-Light') format('svg');
+                font-weight: normal;
+                font-style: normal;
+            }
+        </style>
         <!-- Styles -->
     </head>
 
     <body>
-
-        <section class="container clearfix">
-            <div class="row">
-                <header class="col-12 no-padding">
-                    <!-- Fixed navbar -->
-                    <nav class="navbar navbar-expand-md mb-4 mt-4">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse clearfix" id="navbarCollapse">
-                            <div class="row container-menu">
-                                <div class="col-12 no-padding">
+        <section class="clearfix">
+            <header class="clearfix">
+                <!-- Fixed navbar -->
+                <nav class="navbar navbar-expand-md mb-4 mt-4 no-padding">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse clearfix" id="navbarCollapse">
+                        <div class="container-menus clearfix">
+                           <div class="container">
+                                <div class="col-12 no-padding clearfix">
                                     <ul class="navbar-nav mr-auto first-menu clearfix">
                                         <li>
-                                           <span>
-                                                <img src="img/logo.png" alt="Correios Celular" title="Correios Celular">
+                                            <span>
+                                                <a href="https://www.correioscelular.com.br" class="container-logo">
+                                                    <img src="img/logo.png" alt="Correios Celular" title="Correios Celular">
+                                                </a>
                                             </span>
                                         </li>
                                         <li class="text-center">
-                                           <span>
-                                                <img src="img/tag_atendimento_wpp.png" alt="Atendimento Whatsapp" title="Atendimento Whatsapp">
+                                            <span>
+                                                <a class="d-block" href="tel:11920002020">
+                                                    <img src="img/tag_atendimento_wpp.png" alt="Atendimento Whatsapp" title="Atendimento Whatsapp">
+                                                </a>
                                             </span>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link text-center" href="#">Planos</a>
+                                            <a class="nav-link text-center" href="https://www.correioscelular.com.br">Planos</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link text-center" href="#">Cobertura</a>
+                                            <a class="nav-link text-center" href="https://www.correioscelular.com.br/cobertura">Cobertura</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link text-center" href="#">Configure sua internet</a>
+                                            <a class="nav-link text-center" href="https://www.correioscelular.com.br/como-configurar-sua-internet">Configure sua internet</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link text-center" href="#">Onde comprar</a>
+                                            <a class="nav-link text-center" href="https://www.correioscelular.com.br/onde-comprar">Onde comprar</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link text-center" href="#">Portabilidade</a>
+                                            <a class="nav-link text-center" href="https://www.correioscelular.com.br/portabilidade">Portabilidade</a>
                                         </li>
-                                        <li class="nav-item">
+                                        <li class="nav-item gradient-vertical-style">
                                             <a class="nav-link text-center extra-bold blue" href="#">Compre seu chip</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link text-center extra-bold" href="#">
+                                            <a class="nav-link text-center extra-bold" href="https://www.correioscelular.com.br/recarregue-seu-chip">
                                                 <span class="blue-tag">Recarga</span>
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
+                            </div>
+                            <hr style="position: relative; width: 100%; top: 0; margin: 0; z-index: 0;">
+                            <div class="container container-second-menu">
                                 <div class="col-12 no-padding">
-                                    <ul class="navbar-nav mr-auto second-menu clearfix">
+                                    <ul class="navbar-nav mr-auto second-menu clearfix gradient-horizontal-style">
                                         <li class="nav-item active">
                                             <a class="nav-link text-center blue" href="#">Login / Cadastro</a>
                                         </li>
@@ -74,25 +93,28 @@
                                             <a class="nav-link text-center blue" href="#">Meus Pedido</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link text-center blue" href="#">Televendas:<br> (00)000000</a>
+                                            <a class="nav-link text-center blue" href="#" onclick="return false;">Televendas:<br> (00)000000</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link text-center blue" href="#">Central de<br> Atendimento</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link text-left blue" href="#">
+                                            <a class="nav-link text-left blue" href="#" onclick="return false;">
                                                 <img class="float-left lock-icon" src="img/lock_icon.png" alt="Compra segura" title="Compra segura">
                                                 <span class="float-left">Compra<br> 100% Segura</span>
-                                                <img class="cart-icon" src="img/cart_icon.png" alt="Carrinhor" title="Carrinho">
+                                                <div class="container-cart">
+                                                    <img class="cart-icon" src="img/cart_icon.png" alt="Carrinhor" title="Carrinho">
+                                                    <span class="number-itens text-center">0</span>
+                                                </div>
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                    </nav>
-                </header>
-            </div>
+                    </div>
+                </nav>
+            </header>
         </section>
 
         <section class="container clearfix">
@@ -127,7 +149,7 @@
         <section class="container product-container clearfix">
             <div class="row">
                 <div class="col-3 mt-5 text-center">
-                   <a href="#" class="container-buy-btn">
+                   <a href="#" class="container-buy-btn clearfix">
                         <img class="img-responsive" src="img/hello_30.png" alt="Hello 30" title="Hello 30">
                         <span class="container-buy-btn__buy-btn bold text-uppercase pt-2">
                             Comprar
@@ -135,7 +157,7 @@
                     </a>
                 </div>
                 <div class="col-3 mt-5 text-center">
-                   <a href="#" class="container-buy-btn">
+                   <a href="#" class="container-buy-btn clearfix">
                         <img class="img-responsive" src="img/hello_40.png" alt="Hello 40" title="Hello 40">
                         <span class="container-buy-btn__buy-btn bold text-uppercase pt-2">
                             Comprar
@@ -143,7 +165,7 @@
                     </a>
                 </div>
                 <div class="col-3 mt-5 text-center">
-                   <a href="#" class="container-buy-btn">
+                   <a href="#" class="container-buy-btn clearfix">
                         <img class="img-responsive" src="img/hello_60.png" alt="Hello 60" title="Hello 60">
                         <span class="container-buy-btn__buy-btn bold text-uppercase pt-2">
                             Comprar
@@ -151,7 +173,7 @@
                     </a>
                 </div>
                 <div class="col-3 mt-5 text-center">
-                   <a href="#" class="container-buy-btn">
+                   <a href="#" class="container-buy-btn clearfix">
                         <img class="img-responsive" src="img/hello_90.png" alt="Hello 90" title="Hello 90">
                         <span class="container-buy-btn__buy-btn bold text-uppercase pt-2">
                             Comprar
@@ -163,55 +185,60 @@
 
         <section class="container product-container clearfix">
             <div class="row">
-                <div class="col-3 offset-1 mt-5">
-                    <h6 class="text-uppercase extra-bold light-yellow">
-                        Formas de pagamento
-                    </h6>
-                    <img class="img-responsive" src="img/payment_type.jpg" alt="Formas de pagamento" title="Formas de pagamento">
+                <div class="col-4 mt-5">
+                    <div class="d-table ml-auto mr-auto">
+                        <h6 class="text-uppercase extra-bold light-yellow">
+                            Formas de pagamento
+                        </h6>
+                        <img class="img-responsive" src="img/payment_type.jpg" alt="Formas de pagamento" title="Formas de pagamento">
+                    </div>
                 </div>
                 <div class="col-4 pl-5 mt-5">
-                    <h6 class="text-uppercase extra-bold light-yellow">
-                        Formas de entrega
-                    </h6>
-                    <img class="img-responsive" src="img/shipping_type.jpg" alt="Formas de entrega" title="Formas de entrega">
+                    <div class="d-table ml-auto mr-auto">
+                        <h6 class="text-uppercase extra-bold light-yellow">
+                            Formas de entrega
+                        </h6>
+                        <img class="img-responsive" src="img/shipping_type.jpg" alt="Formas de entrega" title="Formas de entrega">
+                    </div>
                 </div>
-                <div class="col-3 mt-5 text-right">
-                    <div class="fb-page"
-                    data-href="https://www.facebook.com/correioscelular" 
-                    data-width="340"
-                    data-hide-cover="false"
-                    data-show-facepile="true" data-width="420"></div>
+                <div class="col-4 mt-5 text-right">
+                    <div class="d-table ml-auto mr-auto">
+                        <div class="fb-page"
+                        data-href="https://www.facebook.com/correioscelular" 
+                        data-hide-cover="false"
+                        data-show-facepile="true" data-width="240"></div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <footer class="footer mt-5 clearfix">
-            <section class="container mb-4">
+        <footer class="footer clearfix">
+            <section class="container mb-4 d-table">
                 <div class="row">
-                   
                     <div class="col-sm-6">
                        <div class="row">
                             <div class="col-sm-3 text-center">
-                                <img class="img-responsive" src="img/logo_white.png" alt="Correios Celular" title="Correios Celular">
+                               <a href="https://www.correioscelular.com.br">
+                                    <img class="img-responsive" src="img/logo_white.png" alt="Correios Celular" title="Correios Celular">
+                                </a>
                             </div>
                             <div class="col-sm-3">
                                 <p>
-                                    <a href="#">Sobre o correios</a><br>
-                                    <a href="#">Celular</a><br>
-                                    <a href="#">FAQ</a><br>
-                                    <a href="#">Configure sua Internet</a><br>
+                                    <a href="https://www.correioscelular.com.br/sobre">Sobre o correios Celular</a><br>
+                                    <a href="https://www.correioscelular.com.br/duvidas-frequentes">FAQ</a><br>
+                                    <a href="https://www.correioscelular.com.br/como-configurar-sua-internet">Configure sua Internet</a><br>
                                     <a href="#">Compre seu chip</a><br>
-                                    <a href="#">Baixe o App</a><br>
+                                    <a href="http://www.correios.com.br">Baixe o App</a><br>
                                 </p>
                             </div>
                             <div class="col-sm-3">
                                 <p>
-                                    <a href="#">Portabilidade</a><br>
-                                    <a href="#">Facebook</a><br>
-                                    <a href="#">Termos de adesão</a><br>
-                                    <a href="#">Onde comprar</a><br>
-                                    <a href="#">Cadastre-se</a><br>
-                                    <a href="#">Fale conosco</a><br>
+                                    <a href="https://www.correioscelular.com.br/portabilidade">Portabilidade</a><br>
+                                    <a href="https://www.facebook.com/correioscelular/">Facebook</a><br>
+                                    <a href="https://www.correioscelular.com.br/termos-de-adesao">Termos de adesão</a><br>
+                                    <a href="https://www.correioscelular.com.br/onde-comprar">Onde comprar</a><br>
+                                    <a href="https://www.correioscelular.com.br/cadastro">Cadastre-se</a><br>
+                                    <a href="https://www.correioscelular.com.br/contato">Fale conosco</a><br>
                                 </p>
                             </div>
                             <div class="col-sm-3">
@@ -234,7 +261,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-sm-6">
+                    <div class="col-sm-5 offset-sm-1">
                        <div class="row">
                             <div class="col-sm-12">
                                 <p class="text-center size1 border-bottom border-bottom--white pb-1 extra-bold-weight">
@@ -265,7 +292,6 @@
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </section>
         </footer>

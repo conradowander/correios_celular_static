@@ -1,73 +1,86 @@
-<section class="container">
-    <div class="row">
-        <header class="col-xs-12">
-            <!-- Fixed navbar -->
-            <nav class="navbar navbar-expand-md mb-3">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse clearfix" id="navbarCollapse">
-                    <div class="row container-menu">
-                        <div class="col-12 no-padding">
-                            <ul class="navbar-nav mr-auto first-menu">
+<section class="clearfix">
+    <header class="clearfix">
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md mb-4 mt-4 no-padding">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse clearfix" id="navbarCollapse">
+                <div class="container-menus clearfix">
+                   <div class="container">
+                        <div class="col-12 no-padding clearfix">
+                            <ul class="navbar-nav mr-auto first-menu clearfix">
                                 <li>
-                                    <img src="{{ themePath }}{{ settings.logo_correios_celular }}" alt="Correios Celular" title="Correios Celular" />
+                                    <span>
+                                        <a href="https://www.correioscelular.com.br" class="container-logo">
+                                            <img src="{{ themePath }}{{ settings.logo_correios_celular }}" alt="Correios Celular" title="Correios Celular" />
+                                        </a>
+                                    </span>
                                 </li>
-                                <li>
-                                    <img src="{{ themePath }}{{ settings.tag_atendimento_wpp }}" alt="Atendimento Whatsapp" title="Atendimento Whatsapp" />
-                                </li>
-                                <li class="nav-item active">
-                                    <a class="nav-link text-center" href="#">Atendimendo</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-center" href="#">Planos</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-center" href="#">Cobertura</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-center" href="#">Configure sua internet</a>
+                                <li class="text-center">
+                                    <span>
+                                        <a class="d-block" href="tel:11920002020">
+                                            <img src="{{ themePath }}{{ settings.tag_atendimento_wpp }}" alt="Atendimento Whatsapp" title="Atendimento Whatsapp">
+                                        </a>
+                                    </span>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-center" href="#">Onde comprar</a>
+                                    <a class="nav-link text-center" href="https://www.correioscelular.com.br">Planos</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-center" href="#">Portabilidade</a>
+                                    <a class="nav-link text-center" href="https://www.correioscelular.com.br/cobertura">Cobertura</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-center" href="#">Compre seu chip</a>
+                                    <a class="nav-link text-center" href="https://www.correioscelular.com.br/como-configurar-sua-internet">Configure sua internet</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-center" href="#">Recarga</a>
+                                    <a class="nav-link text-center" href="https://www.correioscelular.com.br/onde-comprar">Onde comprar</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-center" href="https://www.correioscelular.com.br/portabilidade">Portabilidade</a>
+                                </li>
+                                <li class="nav-item gradient-vertical-style">
+                                    <a class="nav-link text-center extra-bold blue" href="#">Compre seu chip</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-center extra-bold" href="https://www.correioscelular.com.br/recarregue-seu-chip">
+                                        <span class="blue-tag">Recarga</span>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
+                    </div>
+                    <hr style="position: relative; width: 100%; top: 0; margin: 0; z-index: 0;">
+                    <div class="container container-second-menu">
                         <div class="col-12 no-padding">
-                            <ul class="navbar-nav mr-auto second-menu">
+                            <ul class="navbar-nav mr-auto second-menu clearfix gradient-horizontal-style">
                                 <li class="nav-item active">
-                                    <a class="nav-link text-center" href="#">Login / Cadastro</a>
+                                    <a class="nav-link text-center blue" href="#">Login / Cadastro</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-center" href="#">Meus Pedido</a>
+                                    <a class="nav-link text-center blue" href="#">Meus Pedido</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-center" href="#">Televendas: (00)000000</a>
+                                    <a class="nav-link text-center blue" href="#" onclick="return false;">Televendas:<br> (00)000000</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-center" href="#">Central de Atendimento</a>
+                                    <a class="nav-link text-center blue" href="#">Central de<br> Atendimento</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-center" href="#">Compra 100% Segura</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-center" href="#">Carrinho</a>
+                                    <a class="nav-link text-left blue" href="#" onclick="return false;">
+                                        <img class="float-left lock-icon" src="{{ themePath }}{{ settings.lock_icon }}" alt="Compra segura" title="Compra segura">
+                                        <span class="float-left">Compra<br> 100% Segura</span>
+                                        <div class="container-cart">
+                                            <img class="cart-icon" src="{{ themePath }}{{ settings.cart_img }}" alt="Carrinhor" title="Carrinho">
+                                            <span class="number-itens text-center">0</span>
+                                        </div>
+                                    </a>
                                 </li>
                             </ul>
-                        </div>    
+                        </div>
                     </div>
-                    
                 </div>
-            </nav>
-        </header>
-    </div>
+            </div>
+        </nav>
+    </header>
 </section>
