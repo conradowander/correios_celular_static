@@ -40,7 +40,7 @@
                                     <a class="nav-link text-center" href="https://www.correioscelular.com.br/portabilidade">Portabilidade</a>
                                 </li>
                                 <li class="nav-item gradient-vertical-style">
-                                    <a class="nav-link text-center extra-bold blue" href="#">Compre seu chip</a>
+                                    <a class="nav-link text-center extra-bold blue" href="https://correioscelular.commercesuite.com.br/">Compre seu chip</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-center extra-bold" href="https://www.correioscelular.com.br/recarregue-seu-chip">
@@ -55,22 +55,24 @@
                         <div class="col-12 no-padding">
                             <ul class="navbar-nav mr-auto second-menu clearfix gradient-horizontal-style">
                                 <li class="nav-item active">
-                                    <a class="nav-link text-center blue" href="#">Login / Cadastro</a>
+                                    <a class="login-logout nav-link text-center blue" href="#" onclick="return false;">
+                                        <span class="{{ utils.is_https ? 'modal-login' }}" onclick="window.location.href='{{ links.login }}'" style="cursor: pointer;">Login</span> / <span onclick="window.location.href='{{ links.register }}'" style="cursor: pointer;">Cadastro</span>
+                                    </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-center blue" href="#">Meus Pedido</a>
+                                    <a class="nav-link text-center blue" href="{{ links.orders }}">Meus Pedidos</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-center blue" href="#" onclick="return false;">Televendas:<br> (00)000000</a>
+                                    <a class="nav-link text-center blue" href="#" onclick="return false;">Televendas:<br> {{ Translation('ag_telefone_1') }}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-center blue" href="#">Central de<br> Atendimento</a>
+                                    <a class="nav-link text-center blue" href="{{ links.contact }}">Central de<br> Atendimento</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-left blue" href="#" onclick="return false;">
+                                    <a class="nav-link text-left blue" onclick="return false;">
                                         <img class="float-left lock-icon" src="{{ themePath }}{{ settings.lock_icon }}" alt="Compra segura" title="Compra segura">
-                                        <span class="float-left">Compra<br> 100% Segura</span>
-                                        <div class="container-cart">
+                                        <span class="float-left blue">Compra<br> 100% Segura</span>
+                                        <div class="container-cart" onclick="window.location.href='{{ links.cart }}'" style="cursor: pointer;">
                                             <img class="cart-icon" src="{{ themePath }}{{ settings.cart_img }}" alt="Carrinhor" title="Carrinho">
                                             <span class="number-itens text-center">0</span>
                                         </div>
@@ -83,4 +85,32 @@
             </div>
         </nav>
     </header>
+</section>
+
+<section class="container section-big-title clearfix" style="display:none;">
+    <div class="row">
+        <div class="col-11 offset-1 no-padding">
+            <ul class="plan-type">
+                
+                {% for level1 in categories %}
+                    <li class="semi-bold">
+                        <a href="{{ level1.link }}">
+                            {{ level1.name }}
+                        </a>
+                    </li>
+                {% endfor %}
+                
+            </ul>
+        </div>
+        <div class="container-big-title col-7 offset-1 no-padding mt-3 border-right-blue">
+            <h1 id="firstTitle" class="extra-bold blue text-uppercase big-title">{{ settings.title_first_category }}</h1>
+            <h1 id="secondTitle" class="extra-bold text-uppercase big-title yellow">{{ settings.subtitle_first_category }}</h1>
+        </div>
+        <div class="col-4 no-padding mt-3">
+            <p class="info-type-plan blue text-uppercase blue bold pl-4">
+                Selecione abaixo um ou mais planos<br/>
+                que deseja comprar
+            </p>
+        </div>
+    </div>
 </section>

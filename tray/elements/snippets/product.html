@@ -1,9 +1,14 @@
-<div class="col-3 mt-5 text-center">
-    <a href="{{ product.link }}" class="container-buy-btn clearfix">
-        <img class="img-responsive" src="{{ product.images[0].full }}" alt="{{ product.name }}" title="{{ product.name }}">
-        <span class="container-buy-btn__buy-btn bold text-uppercase pt-2">
-            Comprar
-        </span>
-    </a>
-</div>
+<a href="{{ product.link }}" class="container-buy-btn clearfix">
+    <img class="img-fluid" src="{{ product.images[0].full }}" alt="{{ product.name }}" title="{{ product.name }}">
+    <span class="container-buy-btn__buy-btn bold text-uppercase pt-2">Comprar</span>
+</a>
 
+<div class="description-releated" style="display: none;">
+    
+    <span class="description-releated__name text-center">
+        {{product.name | striptags|slice(0, 90)}}
+    </span>
+    <span class="description-releated__price text-center">
+        Por: R$ {{ product.price|number_format(2, ',', '.') }}
+    </span>
+</div>

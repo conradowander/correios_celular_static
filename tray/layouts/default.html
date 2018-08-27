@@ -1,13 +1,19 @@
 {% set showHeader = not getLayout or (getLayout and 'header' in elementsToLoad) %}
 {% set showFooter = not getLayout or (getLayout and 'footer' in elementsToLoad) %}
+{% set showLeft = not getLayout or (getLayout and 'left' in elementsToLoad) %}
+{% set showRight = not getLayout or (getLayout and 'right' in elementsToLoad) %}
 <!Doctype html>
-<html>
+<html data-theme="{{ settings.extension_id }}" data-store="{{ store.id }}" class="page-{{ pages.current }}">
     <head>
+        {{ html.charset() }}
+        {{ tray.meta }}
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <link rel="icon" href="{{ themePath }}{{ settings.favicon }}">
         
         <!-- Styles -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800">
@@ -28,7 +34,7 @@
             }
         </style>
         <!-- Styles -->
-        
+        <script type="text/javascript" src="{{ asset('js/third-party/jquery-3.3.1.min.js') }}"></script>
     </head>
     <body>
         
@@ -38,13 +44,27 @@
             
         {% endif %}
         
-        {{ content_for_layout }}
+        <section class="container main-container" style="display: none;">
+            {{ content_for_layout }}
+        </section>
     
         {% if showFooter %}
     
             {{ _view.element('footer') }}
             
         {% endif %}
-    {% element 'snippets/pageview' %}
-</body>
+        
+        {% element 'snippets/modal' %}
+        {{ googleTagManager.bottom(pages.current, tagManagerData) }}
+        {{ tray.scripts }}
+        {{
+                html.script({
+                    '0' : tray.paths.js ~ 'dist/application.min.js?' ~ utils.assets_version,
+                    '1' : tray.paths.js ~ 'init.js?' ~ utils.assets_version
+                })
+        }}
+        {% element 'snippets/pageview' %}
+        {{ store.chat }}
+        
+    </body>
 </html>

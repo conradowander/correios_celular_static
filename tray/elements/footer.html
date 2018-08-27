@@ -13,6 +13,50 @@
 'links.compare': links.compare,
 'links.register': links.register
 } %}
+
+<section class="container product-container clearfix">
+    <div class="row">
+        
+        <div class="col-4 mt-5">
+            <div class="d-table ml-auto mr-auto">
+                <h6 class="text-uppercase extra-bold light-yellow">
+                    Formas de pagamento
+                </h6>
+                <ul class="box-payment">
+					<li class="box-payment__payment-forms">   
+						{% for payment in paymentMethods.order %}
+							<img src="{{ payment.thumbnail.url }}" alt="{{ payment.display_name }}">
+						{% endfor %}
+						
+						{% for payment in paymentMethods.credit %}
+							<img src="{{ payment.thumbnail.url }}" alt="{{ payment.display_name }}">
+						{% endfor %}
+					</li>
+				</ul>
+                <!--<img class="img-responsive" src="https://images.tcdn.com.br/642776/themes/18/img/payment_type.jpg" alt="Formas de pagamento" title="Formas de pagamento">-->
+            </div>
+        </div>
+        {% if settings.exibe_envio == 'true' %}
+            <div class="col-4 pl-5 mt-5">
+                <div class="d-table ml-auto mr-auto">
+                    <h6 class="text-uppercase extra-bold light-yellow">
+                        Formas de entrega
+                    </h6>
+                    <img class="img-responsive" src="{{ themePath }}{{ settings.img_entrega }}" alt="Formas de pagamento" title="Formas de pagamento">
+                </div>
+            </div>
+		{% endif %}
+        <div class="col-4 mt-5 text-right">
+            <div class="d-table ml-auto mr-auto">
+                <div class="fb-page"
+                data-href="https://www.facebook.com/correioscelular" 
+                data-hide-cover="false"
+                data-show-facepile="true" data-width="240"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <footer class="footer clearfix">
     <section class="container mb-4 d-table">
         <div class="row">
@@ -145,4 +189,70 @@ js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.1';
 fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<!-- Scripts -->
+<style>
+    .vspace-sm:has(> .catalogo-pagination) {
+        display: none;
+    }
+</style>
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        
+        /* HIDDING ELEMENTS - START */
+    
+        hideElement('.vspace-sm', '.catalogo-pagination');
+        hideElement('.vspace-sm', '.catalogo-form-filtros');
+        hideElement('h1', 'span');
+        $("h1:contains('PLANO INDIVIDUAL')").css("display", "none");
+        $("h1:contains('PLANO REVENDEDOR')").css("display", "none");
+        $(".p1").css("display", "none");
+            
+        /* HIDDING ELEMENTS - END */
+        
+        /* PLAN MENU - START */
+        
+        var url = location.href;
+        
+        var firstTitle = $("h1 span span:eq(0) strong").text();
+        var secondTitle = $("h1 span span:eq(1) strong").text();
+        console.log(firstTitle);
+        console.log(secondTitle);
+        
+        alert(url);
+        
+        if(url.search("plano-individual") >= 0){
+            $(".plan-type li").eq(0).addClass("active");
+            $("#firstTitle").text(firstTitle);
+            $("#secondTitle").text(secondTitle);
+            $(".big-title").css("font-size", "3rem");
+        }
+        else if(url.search("plano-revendedor") >= 0){
+            $(".plan-type li").eq(1).addClass("active");
+            $("#firstTitle").text(firstTitle);
+            $("#secondTitle").text(secondTitle);
+            $(".big-title").css("font-size", "2.3rem");
+        }
+        else{
+            $(".plan-type li").eq(0).addClass("active");
+            $(".big-title").css("font-size", "3rem");
+        }
+        
+        if($('body').find('.products-container').length !== 0){
+            $(".section-big-title").css("display", "block");
+        }
+        else{
+            $(".section-big-title").css("display", "none");
+        }
+        
+        $(".main-container").css("display", "block");
+        
+        /* PLAN MENU - END */
+        
+    });
+    
+    /* FUNCTIONS */
+    function hideElement(fatherElement, childElement){
+        $(childElement).parent(fatherElement).hide();
+    }
+</script>

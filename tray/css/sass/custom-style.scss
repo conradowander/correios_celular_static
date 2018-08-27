@@ -1,4 +1,4 @@
-
+@charset "utf-8";
 
 /* General Styles
 -------------------------------------------------- */
@@ -228,8 +228,7 @@ header a {
     padding-bottom: 0;
 }
 
-.second-menu li a:hover,
-.second-menu li a:hover span{
+.second-menu li a:hover{
     text-decoration: underline;
 }
 
@@ -397,6 +396,35 @@ footer p{
 .footer a:hover{
     color: #fff;
     text-decoration: none;
+}
+
+.box-payment{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    max-width: 260px;
+}
+
+.box-payment__payment-forms img {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.second-menu li a.login-logout:hover{
+    cursor: default;
+    text-decoration: none !important;
+}
+
+.second-menu li a.login-logout span:hover {
+    text-decoration: underline !important;
+}
+
+/* página de cadastro */
+.container2 {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: auto;
 }
 
 @media (min-width:1246px) {

@@ -1,3 +1,291 @@
+<style type="text/css">
+    
+    #loading-product-container, #loading-tab-container {
+        position: absolute;
+        display: none;
+        background: #fff;
+        opacity: .8;
+        margin: 0;
+        z-index: 9999;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .breadcrumb,
+    .tray-hide,
+    .product-id{
+        display: none!important;
+    }
+    
+    .produto-imagem-grande a img{
+        width: 100%;
+        max-width: 354px;
+    }
+    
+    .product-title{
+        color: #4779bb;
+    }
+    
+    .product-details span,
+    .product-details strong{
+        display: none;
+    }
+    
+    .product-details,
+    .product-labels{
+        line-height: 100%;
+        font-family: Montserrat, sans-serif
+    }
+    
+    .product-details{
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    
+    /* form comprar */
+    #form_comprar{
+        border-top: 4px solid #4779bb;
+        font-family: Montserrat, sans-serif;
+        padding-top: 10px;
+    }
+    
+    .produto-calcular-frete{
+        border-top: 4px solid #4779bb;
+        padding-top: 30px;
+        float: left;
+        width: 100%;
+        margin-top: 32px;
+    }
+    
+    #bt_comprar {
+        float: right;
+    }
+    
+    .remove-bg button {
+        border: none;
+        width: 213px;
+        height: 66px;
+        background: url('https://images.tcdn.com.br/img/img_prod/642776/1532792521_botao_comprar.png') no-repeat;
+    }
+    
+    .remove-bg button img {
+        display: none;
+    }
+    
+    #preco #produto_preco br {
+        display: none;
+    }
+    
+    .color-tone-2.txt-por {
+        color: #4779bb;
+    }
+    
+    .precoAvista, .txt-por {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #510303;
+        font-family: Montserrat,sans-serif;
+    }
+    
+    #preco .PrecoPrincipal {
+        font-size: 1.625rem;
+        color: #414141;
+    }
+    
+    #preco .PrecoPrincipal .currency{
+        text-decoration: none;
+    }
+    
+    #variacaoPreco,
+    .currency{
+        font-weight: 800;
+    }
+    
+    /* carousel */
+    #visualAbas{
+        display:none;
+    }
+    
+    #quantidade{
+        font-size: 0.875rem;
+    }
+    
+    #quant{
+        width: 38px;
+        height: 40px;
+        border-radius: 8px;
+        border: 1px solid #bababa;
+        text-align: center;
+    }
+    
+    #cep1,
+    #cep2{
+        border-radius: 8px;
+        border: 1px solid #bababa;
+    }
+    
+    .produto-formas-pagamento,
+    .produto-recommend,
+    #ProdBlock{
+        display:none !important;
+    }
+    
+    #button-buy,
+    #shippingSimulatorButton{
+        opacity: .9;
+        transition: opacity 0.3s ease;
+    }
+    
+    #button-buy:hover,
+    #shippingSimulatorButton:hover{
+        opacity: 1;
+        cursor: pointer;
+    }
+    
+    /* Forma de pagamento */
+    #ProdAbas, #ProdBlock {
+        display: block;
+        width: auto;
+        margin-top: 45px;
+    }
+    
+    #ProdAbas ul {
+        border-bottom: 1px solid #ccc;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        float: left;
+        width: 100%;
+        margin-top: -32px;
+    }
+    
+    .Forma1{
+        list-style: none;
+        padding-left: 0;
+    }
+    
+    .Forma1 li {
+        background: no-repeat;
+        border: 1px solid #dfdfdf;
+        margin-top: 10px;
+    }
+    
+    .Forma1 li table tbody tr td{
+        padding: 10px 14px 14px 14px;
+    }
+    
+    .tablePags td {
+        font-family: Arial;
+        font-size: 0.6875rem;
+        color: #666;
+    }
+    
+    .txt-forma-pagto span.item-parcela {
+        display: block;
+    }
+    
+    #ProdBlock #ProdAbas li {
+        -moz-border-radius-topleft: 8px;
+        padding-top: 0;
+        line-height: 16px;
+        background: #f6f5f5;
+        float: left;
+        margin: 0 4px 0 0;
+        border: 1px solid #ccc;
+        border-bottom: 0;
+        border-radius: 2px 2px 0 0;
+        padding-bottom: 0;
+    }
+    
+    #ProdBlock li a {
+        line-height: 30px;
+        padding: 0 15px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        box-sizing: border-box;
+        color: #747474;
+        text-transform: uppercase;
+    }
+    
+    #ProdBlock li a:hover {
+        text-decoration: none;
+    }
+    
+    #ProdAbas .aberta{
+        background-color: #fff !important;
+    }
+    
+    #coments, #formasPagto, #garantia {
+        border-left: solid 1px #d2d1d1;
+        border-right: solid 1px #d2d1d1;
+        border-bottom: solid 1px #d2d1d1;
+        padding: 20px;
+    }
+    
+    .container-buy-btn__buy-btn{
+        display: none;
+    }
+    
+    .description-releated,
+    .description-releated__name,
+    .description-releated__price{
+        display: block !important;
+    }
+    
+    .description-releated__name{
+        font-weight: bold;
+    }
+    
+    .description-releated__price{
+        font-weight: bold;
+        color: #4779bb;
+    }
+    
+    .products-related .related-title {
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+        display: inline-block;
+        margin: 0 0 -1px;
+        padding: 5px 20px;
+        text-transform: uppercase;
+    }
+    
+    .products-related .list-related {
+        border: 1px solid #ccc;
+        padding: 30px;
+    }
+    
+    .related-title{
+        font-size: 0.8rem;
+        background-color: #fff;
+    }
+    
+    .product-question{
+        width: 206px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+    
+    .product-question a{
+        width: 100%;
+        background-color: #137AC0;
+        height: 30px;
+        color: #fff;
+        border-radius: 50px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        padding-top: 4px;
+        display: block;
+    }
+    
+</style>
+
 {% if banner.title %}
     <div class="banner banner-title">
         {{ banner.title }}
@@ -19,22 +307,17 @@
           </strong>
         </span>
         {% if productHelper.banner() %}{{ productHelper.banner() }}{% endif %}
-        <h3 class="product-title">{{ product.name }}</h3>
-    </div>
     <div class="row">
         <div class="col-md-6 no-padding">
             <div id="visualBlock" class="product-gallery">
                 {{ productHelper.gallery() }}
-            </div>
-            <div class="product-social">
-                {{ productHelper.social() }}
             </div>
             <div class="product-links clearfix">
                 <span class="produto-recommend col-sm-6 col-xs-12">
                     <a href="#" data-url="{{ links.product_recommend ~ product.id }}" data-title="{{ product.name }}" class="botao_indique_amigo" data-toggle="modal" data-target="#modal-form" data-modal-width="600px">{{ Translation('indique_amigo') }}</a>
                 </span>
           
-                <span class="product-question col-sm-6 col-xs-12">
+                <span class="product-question text-center">
                     <a href="#" data-url="{{ links.product_question ~ product.id }}" data-title="{{ product.name }}" class="botao_tire_duvidas" data-toggle="modal" data-target="#modal-form" data-modal-width="600px">{{ Translation('tire_duvidas') }}</a>
                 </span>
             </div>
@@ -42,15 +325,28 @@
         <div class="col-md-6">
             {% element 'product/rating' %}
             <div class="product-labels">
-                {{ productHelper.labels() }}
+                <h3 class="product-title">{{ product.name }}</h3>
             </div>
             <p class="product-details">
                 {% if settings.show_product_stock %}
                     <span>Estoque: <b>{{ product.stock }}</b></span>
-                {% endif %}                 
+                {% endif %}
+                <!--
                 {{ productHelper.details() }} 
                 {{ productHelper.icons() }}
+                -->
+                Marca: <strong id="marca-text"></strong><br>
+                Modelo: <strong id="model-text"></strong>
             </p>
+            <script type="text/javascript">
+            
+                var name = $("span[itemprop=name]").text();
+                var model = $("span[itemprop=model]").text();
+                $("#marca-text").text(name).css("display", "inline-block");
+                $("#model-text").text(model).css("display", "inline-block");
+                $(".main-container").css("display", "block");
+                
+            </script>
             {{ productHelper.bonus() }}
             <form id="form_comprar" method="post" data-app="product.buy-form" action="{{ links.cart_add ~ product.id }}">
                 {{ productHelper.pricing() }} 
@@ -132,16 +428,16 @@
 {% if product.related_products %}
 <div class="products-related">
     <div id="prognoos_lsi"></div>
-    <h3 class="related-title">Produtos Relacionados</h3> 
-    <div class="clearfix list-related">
-        {% for related in product.related_products %}
-          <div class="col-sm-4 product">
-              {% element 'snippets/product' {"product": related} %}
-          </div>
-        {% if loop.index is divisible by(4) %}
-    </div>
     <div class="row">
-          {% endif %} {% endfor %}
+        <h3 class="related-title">Produtos Relacionados</h3>
+    </div>
+    <div class="row list-related">
+        {% for related in product.related_products %}
+            <div class="col-2 product">
+                {% element 'snippets/product' {"product": related} %}
+            </div>
+            {% if loop.index is divisible by(4) %}{% endif %}
+        {% endfor %}
     </div>
 </div>
 {% endif %}
